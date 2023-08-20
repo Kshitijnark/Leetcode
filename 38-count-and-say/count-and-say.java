@@ -20,6 +20,7 @@ class Solution {
                 freq++;
             }
         }
+        System.gc();
         return ans;
     }
 }
