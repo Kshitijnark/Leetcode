@@ -1,18 +1,20 @@
 class Solution {
     public String countAndSay(int n) {
-        return util1(n);
-    }
-    public String util1(int n) {
-        if (n == 1) {
-            return "1";
+      StringBuilder ans = new StringBuilder();
+        ans.append("1");
+        for (int i = 2; i <= n; i++) {
+            ans = helper(ans);
         }
-        String prev = util1(n - 1);
-        String ans = "";
+        return ans.toString();
+    }
+
+    public StringBuilder helper(StringBuilder prev) {
+        StringBuilder ans = new StringBuilder();
         int freq = 1;
         for (int i = 0; i < prev.length(); i++) {
             if (i == prev.length() - 1 || prev.charAt(i) != prev.charAt(i + 1)) {
-                ans += freq;
-                ans += prev.charAt(i);
+                ans.append(freq);
+                ans.append(prev.charAt(i));
                 freq = 1;
             } else {
                 freq++;
