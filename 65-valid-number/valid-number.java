@@ -1,15 +1,15 @@
-import java.math.BigDecimal;
-
 class Solution {
-    public static boolean isNumber(String s) {
-        try {
-            BigDecimal bigDecimal = new BigDecimal(s);
-            return true;
-        } catch (NumberFormatException e) {
-            if (e.getMessage() != null && (e.getMessage().equals("Too many nonzero exponent digits.") || e.getMessage().equals("Exponent overflow."))) return true;
+    public boolean isNumber(String s) {
+        try{
+            int l=s.length();
+            if(s.equals("Infinity")||s.equals("-Infinity")||s.equals("+Infinity")||s.charAt(l-1)=='f'||s.charAt(l-1)=='d'||s.charAt(l-1)=='D'||s.charAt(l-1)=='F')
             return false;
-        } catch (Exception e) {
+            double x=Double.parseDouble(s);
+            return true;
+        }
+        catch(Exception e){
             return false;
         }
+        
     }
 }
