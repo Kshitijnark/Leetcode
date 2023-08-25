@@ -11,7 +11,6 @@ class Solution {
             if (max_ending_here < 0)
                 max_ending_here = 0;
         }
-        System.gc();
         return max_so_far;
     }
 }
