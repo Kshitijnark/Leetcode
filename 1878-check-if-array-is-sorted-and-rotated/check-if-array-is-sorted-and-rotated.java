@@ -6,7 +6,7 @@ class Solution {
             if(nums[i] > nums[i+1])
                 count++;
         }
-System.out.print(count);
+// System.out.print(count);
         if(count == 0)
             return true;
         else if(count > 1)
