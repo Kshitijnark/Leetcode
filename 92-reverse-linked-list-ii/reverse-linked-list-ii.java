@@ -34,8 +34,9 @@ class Solution {
         ei.val=ldata;
         left++;
         right--;
+         System.gc();
         }
-        System.gc();
+       
         return head;
         
 
