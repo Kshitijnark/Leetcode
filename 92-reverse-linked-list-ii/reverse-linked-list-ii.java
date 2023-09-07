@@ -10,7 +10,6 @@
  */
 class Solution {
     public ListNode reverseBetween(ListNode head, int left, int right) {
-        ListNode ans;
         int ldata,rdata;
         while(left<=right){
             ListNode si=head;
@@ -36,6 +35,7 @@ class Solution {
         left++;
         right--;
         }
+        System.gc();
         return head;
         
 
