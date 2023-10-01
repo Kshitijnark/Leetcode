@@ -38,7 +38,7 @@ class Solution {
             }
             ans.val=totalsum%10;
             carry=totalsum/10;
-            ListNode head=new ListNode(carry);
+            ListNode head=new ListNode(1);
             head.next=ans;
             ans=head;
             totalsum=carry;
